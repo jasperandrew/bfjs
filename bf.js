@@ -86,7 +86,7 @@ class StringStream {
     }
 }
 
-class BrainfuckInterpreter extends StringStream {
+class BFInterpreter extends StringStream {
     constructor(code='') {
         super('');
         this.setStream(code);
@@ -166,7 +166,7 @@ class BrainfuckInterpreter extends StringStream {
     next() { this.skip(); }
     prev() { this.rewind(); }
 
-    // BrainfuckInterpreter methods
+    // BFInterpreter methods
     handleRetCode(c) {
         switch(c){
             case -1: this.status = 'stopped'; break; // Parse error
@@ -228,7 +228,7 @@ class BrainfuckInterpreter extends StringStream {
 }
 
 // Run stuff
-const BFI = new BrainfuckInterpreter();
+const BFI = new BFInterpreter();
 
 const UI = {
     cell_size: 60, //px
@@ -358,11 +358,10 @@ const UI = {
     }
 }
 
+// Hello world code sample sourced from Wikipedia
 UI.examples = {
     helloworld:
 `[
-From wikipedia: https://en.wikipedia.org/wiki/Brainfuck#Hello_World!
-
 This program prints "Hello World!" and a newline to the screen, its
 length is 106 active command characters. [It is not the shortest.]
 

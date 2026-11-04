@@ -205,7 +205,7 @@ body {
     user-select: none;
 }
 #code.empty::before {
-    content: 'Your Brainfuck code goes here';
+    content: 'Your code goes here';
     color: #999;
     cursor: text;
     position: absolute;

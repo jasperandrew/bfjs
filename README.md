@@ -1,2 +1,2 @@
-# brainfuck-js
-A Brainfuck interpreter in JS
+# bfjs
+A BF interpreter in JS
